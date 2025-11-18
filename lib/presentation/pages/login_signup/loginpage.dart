@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class LogInPage extends StatelessWidget {
-  const LogInPage({super.key});
-
+  const LogInPage({super.key, required this.goToFillData});
+  final VoidCallback goToFillData;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,7 +42,7 @@ class LogInPage extends StatelessWidget {
               height: 207,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: goToFillData,
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(333, 47),
                 backgroundColor: Color.fromRGBO(35, 12, 2, 1),

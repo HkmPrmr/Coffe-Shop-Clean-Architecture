@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_overview_coffeshop/app_routes.dart';
+import 'package:widgets_overview_coffeshop/presentation/controllers/login_controller.dart';
 import 'package:widgets_overview_coffeshop/presentation/controllers/welcome_controller.dart';
+import 'package:widgets_overview_coffeshop/presentation/pages/login_signup/enter_p_datapage.dart';
 import 'package:widgets_overview_coffeshop/presentation/pages/login_signup/loginpage.dart';
 import 'package:widgets_overview_coffeshop/presentation/pages/welcompage.dart';
 
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     WelcomeController welcomeController = WelcomeController();
+    LoginController loginController = LoginController();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       initialRoute: AppRoutes.welcome,
@@ -24,8 +27,9 @@ class MyApp extends StatelessWidget {
           });
         },
         AppRoutes.login: (context) {
-          return LogInPage();
-        }
+          return LogInPage(goToFillData: () { return loginController.gotToFillDataPage(context); },);
+        },
+        AppRoutes.fillData:(context)=>PersonalLoginData(),
       },
     );
   }
