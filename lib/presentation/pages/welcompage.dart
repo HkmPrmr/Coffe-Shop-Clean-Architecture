@@ -11,7 +11,7 @@ class WelcomePage extends StatelessWidget {
         width: MediaQuery.sizeOf(context).width,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/images/background.png'),
+            image: AssetImage('assets/images/unsplashbackgroundimage.png'),
             fit: BoxFit.cover,
           ),
         ),

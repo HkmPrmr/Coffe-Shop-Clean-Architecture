@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_overview_coffeshop/app_routes.dart';
 import 'package:widgets_overview_coffeshop/presentation/controllers/welcome_controller.dart';
-import 'package:widgets_overview_coffeshop/presentation/pages/loginpage.dart';
+import 'package:widgets_overview_coffeshop/presentation/pages/login_signup/loginpage.dart';
 import 'package:widgets_overview_coffeshop/presentation/pages/welcompage.dart';
 
 void main() {
