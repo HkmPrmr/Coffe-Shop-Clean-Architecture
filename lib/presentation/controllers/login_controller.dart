@@ -5,4 +5,7 @@ class LoginController {
   void gotToFillDataPage(BuildContext context){
     Navigator.pushNamed(context, AppRoutes.fillData);
   }
+  void goToHomePage(BuildContext context){
+    Navigator.pushReplacementNamed(context, AppRoutes.homepage);
+  }
 }

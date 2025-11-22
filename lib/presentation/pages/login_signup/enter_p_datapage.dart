@@ -6,8 +6,8 @@ import 'package:widgets_overview_coffeshop/presentation/pages/login_signup/login
 import 'package:widgets_overview_coffeshop/presentation/pages/login_signup/login_widgets/li_textfield.dart';
 
 class PersonalLoginData extends StatelessWidget {
-  const PersonalLoginData({super.key});
-
+  const PersonalLoginData({super.key, required this.enterTheApp});
+  final VoidCallback enterTheApp;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +59,7 @@ class PersonalLoginData extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: LoginButton(
                   buttonText: 'Login',
-                  loginAct: () {},
+                  loginAct:enterTheApp,
                 ),
               ),
               SizedBox(
