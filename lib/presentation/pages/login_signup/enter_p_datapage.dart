@@ -26,29 +26,28 @@ class PersonalLoginData extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: 350,
+                height: MediaQuery.of(context).size.height*0.4,
               ),
               Row(
                 children: [
                   Padding(
                     padding: const EdgeInsets.only(left: 29),
                     child: TitleText(
-                      titleText: 'Welcom\nBack',
+                      titleText: 'Welcom\nBack!',
                     ),
                   ),
                 ],
               ),
-              SizedBox(
-                width: 332.5,
-                height: 56,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
                 child: LiTextField(
                   tfText: 'Email',
+                  tfHintText: 'cetinselenay321@email.com',
                   hideText: false,
                 ),
               ),
-              SizedBox(
-                width: 332.5,
-                height: 56,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 32),
                 child: LiTextField(
                   tfText: 'Password',
                 ),
@@ -56,16 +55,22 @@ class PersonalLoginData extends StatelessWidget {
               SizedBox(
                 height: 42,
               ),
-              LoginButton(
-                buttonText: 'Login',
-                loginAct: () {},
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: LoginButton(
+                  buttonText: 'Login',
+                  loginAct: () {},
+                ),
               ),
               SizedBox(
                 height: 13,
               ),
-              CreateAccButton(
-                buttonText: 'Create an account',
-                createAccAct: () {},
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 30),
+                child: CreateAccButton(
+                  buttonText: 'Create an account',
+                  createAccAct: () {},
+                ),
               ),
               SizedBox(
                 height: 42,

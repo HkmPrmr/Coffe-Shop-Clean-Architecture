@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 
 class CreateAccButton extends StatelessWidget {
-  const CreateAccButton({super.key, required this.buttonText, required this.createAccAct});
-final String buttonText;
-final VoidCallback createAccAct;
+  const CreateAccButton(
+      {super.key, required this.buttonText, required this.createAccAct});
+  final String buttonText;
+  final VoidCallback createAccAct;
   @override
   Widget build(BuildContext context) {
     return OutlinedButton(
       style: OutlinedButton.styleFrom(
-        fixedSize: Size(333, 47),
+        // fixedSize: Size(333, 47),
+        minimumSize: Size(double.infinity, 47),
+
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(
               Radius.circular(40),
@@ -18,7 +21,7 @@ final VoidCallback createAccAct;
               color: Color.fromRGBO(35, 12, 2, 1),
             )),
       ),
-      onPressed:createAccAct,
+      onPressed: createAccAct,
       child: Text(
         buttonText,
         style: TextStyle(

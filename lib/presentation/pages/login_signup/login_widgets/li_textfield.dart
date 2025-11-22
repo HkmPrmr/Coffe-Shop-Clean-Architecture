@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
 class LiTextField extends StatelessWidget {
-  const LiTextField({super.key, required this.tfText, this.hideText = true});
+  const LiTextField(
+      {super.key,
+      required this.tfText,
+      this.hideText = true,
+      this.tfHintText = ''});
   final String tfText;
+  final String tfHintText;
   final bool hideText;
   @override
   Widget build(BuildContext context) {
@@ -10,6 +15,7 @@ class LiTextField extends StatelessWidget {
       obscureText: hideText,
       cursorColor: Color.fromRGBO(35, 12, 2, 1),
       decoration: InputDecoration(
+        hintText: tfHintText,
         focusedBorder: UnderlineInputBorder(
           borderSide: BorderSide(
             color: Color.fromRGBO(35, 12, 2, 1),
