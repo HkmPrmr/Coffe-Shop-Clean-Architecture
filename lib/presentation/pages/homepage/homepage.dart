@@ -21,12 +21,17 @@ class Homepage extends StatelessWidget {
             ),
           ),
           Container(
+            height:40 ,
+            
             color: Color.fromRGBO(238, 220, 198, 1),
             child: CoffeTypeListView(),
           ),
-          Container(
-            color: Color.fromRGBO(35, 12, 2, 1),
-            child: ProductListView(),
+          SingleChildScrollView(
+            child: Container(
+              height: 600,
+              color: Color.fromRGBO(35, 12, 2, 1),
+              child: ProductListView(),
+            ),
           ),
         ],
       ),
