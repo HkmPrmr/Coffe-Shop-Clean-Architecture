@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:widgets_overview_coffeshop/app_routes.dart';
 import 'package:widgets_overview_coffeshop/presentation/controllers/login_controller.dart';
 import 'package:widgets_overview_coffeshop/presentation/controllers/welcome_controller.dart';
-import 'package:widgets_overview_coffeshop/presentation/pages/homepage.dart';
+import 'package:widgets_overview_coffeshop/presentation/pages/homepage/homepage.dart';
 import 'package:widgets_overview_coffeshop/presentation/pages/login_signup/enter_p_datapage.dart';
 import 'package:widgets_overview_coffeshop/presentation/pages/login_signup/loginpage.dart';
 import 'package:widgets_overview_coffeshop/presentation/pages/welcompage.dart';
