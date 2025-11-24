@@ -1,4 +1,7 @@
-abstract class HomePageController {
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+
+abstract class HomePageLists {
   static List<String> coffeTypeList = [
     'Popular',
     'Black coffee',
@@ -12,10 +15,30 @@ abstract class HomePageController {
     'assets/images/item3.png',
     'assets/images/item4.png',
   ];
-  static List<String> coffeNameList=[
+  static List<String> coffeNameList = [
     'ICED AMERICANO',
     'CAPPUCINO LATTE',
     'SILKY CAFEAU LAIT ',
     'ICED CHOCOLATE'
+  ];
+  static List<Icon> popUpIconList = [
+    Icon(
+      Icons.person,
+    ),
+    Icon(
+      Icons.settings_outlined,
+    ),
+    Icon(
+      Icons.help_outline_sharp,
+    ),
+    Icon(
+      Icons.logout,
+    ),
+  ];
+  static List<String> popUpTextList = [
+    'Profile',
+    'Setting',
+    'Help',
+    'Logout',
   ];
 }

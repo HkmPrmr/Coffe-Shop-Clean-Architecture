@@ -9,16 +9,16 @@ class ProductListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       
-      itemCount: HomePageController.coffeImageList.length,
+      itemCount: HomePageLists.coffeImageList.length,
       itemBuilder: (context, index) => Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 30,
           vertical: 12,
         ),
         child: SingleProduct(
-          coffeType: HomePageController.coffeTypeList[index],
-          coffeName: HomePageController.coffeNameList[index],
-          coffeImage: HomePageController.coffeImageList[index],
+          coffeType: HomePageLists.coffeTypeList[index],
+          coffeName: HomePageLists.coffeNameList[index],
+          coffeImage: HomePageLists.coffeImageList[index],
         ),
       ),
     );

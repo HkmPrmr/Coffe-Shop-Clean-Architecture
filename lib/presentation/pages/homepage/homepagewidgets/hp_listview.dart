@@ -9,9 +9,9 @@ class CoffeTypeListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
-      itemCount: HomePageController.coffeTypeList.length,
+      itemCount: HomePageLists.coffeTypeList.length,
       itemBuilder: (context, index) =>
-          ListViewButton(coffeType: HomePageController.coffeTypeList[index]),
+          ListViewButton(coffeType: HomePageLists.coffeTypeList[index]),
     );
   }
 }

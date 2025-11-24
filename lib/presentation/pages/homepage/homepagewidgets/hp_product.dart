@@ -18,9 +18,8 @@ class SingleProduct extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: ListTile(
-      
-        
         title: Text(coffeType),
+        contentPadding: EdgeInsets.only(top: 10),
         titleTextStyle: TextStyle(
           color: Color.fromRGBO(35, 12, 2, 1),
           fontFamily: 'Poppins',
@@ -37,14 +36,12 @@ class SingleProduct extends StatelessWidget {
           letterSpacing: 0,
         ),
         trailing: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(10)
-          ),
-          height: MediaQuery.sizeOf(context).height * 0.11,
+          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+          height: MediaQuery.sizeOf(context).height * 0.12,
           width: MediaQuery.sizeOf(context).width * 0.18,
           child: Image.asset(
             coffeImage,
-            fit: BoxFit.contain,
+            fit: BoxFit.fill,
           ),
         ),
       ),
