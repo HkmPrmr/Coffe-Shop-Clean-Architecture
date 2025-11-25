@@ -8,12 +8,12 @@ class ProductListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      
+      padding: EdgeInsets.symmetric(vertical: 20 ),
       itemCount: HomePageLists.coffeImageList.length,
       itemBuilder: (context, index) => Padding(
         padding: const EdgeInsets.symmetric(
-          horizontal: 30,
-          vertical: 12,
+          horizontal: 25,
+          vertical:12,
         ),
         child: SingleProduct(
           coffeType: HomePageLists.coffeTypeList[index],

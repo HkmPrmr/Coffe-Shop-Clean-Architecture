@@ -17,34 +17,80 @@ class SingleProduct extends StatelessWidget {
         color: Color.fromRGBO(255, 245, 233, 1),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: ListTile(
-        title: Text(coffeType),
-        contentPadding: EdgeInsets.only(top: 10),
-        titleTextStyle: TextStyle(
-          color: Color.fromRGBO(35, 12, 2, 1),
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w500,
-          fontSize: 10,
-          letterSpacing: 0,
-        ),
-        subtitle: Text(coffeName),
-        subtitleTextStyle: TextStyle(
-          color: Color.fromRGBO(35, 12, 2, 1),
-          fontFamily: 'Poppins',
-          fontWeight: FontWeight.w500,
-          fontSize: 16,
-          letterSpacing: 0,
-        ),
-        trailing: Container(
-          decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
-          height: MediaQuery.sizeOf(context).height * 0.12,
-          width: MediaQuery.sizeOf(context).width * 0.18,
-          child: Image.asset(
-            coffeImage,
-            fit: BoxFit.fill,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 18),
+            child: RichText(
+              text: TextSpan(children: [
+                TextSpan(
+                  text: coffeType,
+                  style: TextStyle(
+                    color: Color.fromRGBO(35, 12, 2, 1),
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w500,
+                    fontSize: 10,
+                    height: 0,
+                    letterSpacing: 0,
+                  ),
+                ),
+                TextSpan(
+                  text: '\n$coffeName',
+                  style: TextStyle(
+                    color: Color.fromRGBO(35, 12, 2, 1),
+                    fontFamily: 'Poppins',
+                    fontWeight: FontWeight.w500,
+                    fontSize: 16,
+                    height: 2,
+                    letterSpacing: 0,
+                  ),
+                ),
+              ]),
+            ),
           ),
-        ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 6),
+            child: SizedBox(
+              height: MediaQuery.sizeOf(context).height * 0.11,
+              width: MediaQuery.sizeOf(context).width * 0.18,
+              child: Image.asset(
+                coffeImage,
+                fit: BoxFit.fitHeight,
+              ),
+            ),
+          )
+        ],
       ),
+      // child: ListTile(
+      //   title: Text(coffeType),
+      //   contentPadding: EdgeInsets.only(top: 10),
+      //   titleTextStyle: TextStyle(
+      //     color: Color.fromRGBO(35, 12, 2, 1),
+      //     fontFamily: 'Poppins',
+      //     fontWeight: FontWeight.w500,
+      //     fontSize: 10,
+      //     letterSpacing: 0,
+      //   ),
+      //   subtitle: Text(coffeName),
+      //   subtitleTextStyle: TextStyle(
+      //     color: Color.fromRGBO(35, 12, 2, 1),
+      //     fontFamily: 'Poppins',
+      //     fontWeight: FontWeight.w500,
+      //     fontSize: 16,
+      //     letterSpacing: 0,
+      //   ),
+
+      //   trailing: Container(
+      //     decoration: BoxDecoration(borderRadius: BorderRadius.circular(10)),
+      // height: MediaQuery.sizeOf(context).height * 0.11,
+      // width: MediaQuery.sizeOf(context).width * 0.18,
+      //     child: Image.asset(
+      //       coffeImage,
+      //       fit: BoxFit.fitHeight,
+      //     ),
+      //   ),
+      // ),
     );
   }
 }

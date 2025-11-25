@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_overview_coffeshop/presentation/controllers/homepage_controller.dart';
+import 'package:widgets_overview_coffeshop/presentation/controllers/app_controller.dart';
 import 'package:widgets_overview_coffeshop/presentation/pages/homepage/homepagewidgets/hp_popupitem.dart';
 
 class HpAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -8,8 +8,12 @@ class HpAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
+      scrolledUnderElevation: 0,
       backgroundColor: Color.fromRGBO(238, 220, 198, 1),
-      leading: Icon(Icons.search_outlined),
+      leading: Padding(
+        padding: const EdgeInsets.only(left: 40),
+        child: Icon(Icons.search_outlined),
+      ),
       title: Text(appBarTitle),
       titleTextStyle: TextStyle(
         color: Color.fromRGBO(78, 43, 15, 1),
@@ -24,40 +28,28 @@ class HpAppBar extends StatelessWidget implements PreferredSizeWidget {
           color: Color.fromRGBO(35, 12, 2, 1),
         ),
         PopupMenuButton(
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(30),
-            bottomLeft: Radius.circular(30),
-          ),
-          color: Color.fromRGBO(255, 245, 233, 1),
-          icon: Icon(Icons.menu),
-          iconColor: Color.fromRGBO(35, 12, 2, 1) ,
-          itemBuilder: (context) => [
-            PopupMenuItem(
-              child: PopUpItem(
-                itemText: HomePageLists.popUpTextList[0],
-                trialingItem: HomePageLists.popUpIconList[0],
+          
+            position: PopupMenuPosition.under,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(30),
+                bottomLeft: Radius.circular(30),
               ),
             ),
-            PopupMenuItem(
-              child: PopUpItem(
-                itemText: HomePageLists.popUpTextList[1],
-                trialingItem: HomePageLists.popUpIconList[1],
-              ),
-            ),
-            PopupMenuItem(
-              child: PopUpItem(
-                itemText: HomePageLists.popUpTextList[2],
-                trialingItem: HomePageLists.popUpIconList[2],
-              ),
-            ),
-            PopupMenuItem(
-              child: PopUpItem(
-                itemText: HomePageLists.popUpTextList[3],
-                trialingItem: HomePageLists.popUpIconList[3],
-              ),
-            ),
-          ],
-        )
+            color: Color.fromRGBO(255, 245, 233, 1),
+            icon: Icon(Icons.menu),
+            iconColor: Color.fromRGBO(35, 12, 2, 1),
+            itemBuilder: (context) {
+              return AppLists.popUpItemList.map((item) {
+                return PopupMenuItem(
+                  
+                  child: PopUpItem(
+                    leadingItem: Icon(item['icon']),
+                    itemText: item['text'],
+                  ),
+                );
+              }).toList();
+            })
       ],
     );
   }

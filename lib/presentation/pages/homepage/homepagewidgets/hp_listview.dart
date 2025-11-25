@@ -4,14 +4,18 @@ import 'package:widgets_overview_coffeshop/presentation/pages/homepage/homepagew
 
 class CoffeTypeListView extends StatelessWidget {
   const CoffeTypeListView({super.key});
-  
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       scrollDirection: Axis.horizontal,
       itemCount: HomePageLists.coffeTypeList.length,
-      itemBuilder: (context, index) =>
-          ListViewButton(coffeType: HomePageLists.coffeTypeList[index]),
+      itemBuilder: (context, index) => Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 4),
+        child: ListViewButton(
+          coffeType: HomePageLists.coffeTypeList[index],
+        ),
+      ),
     );
   }
 }
